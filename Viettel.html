@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function is_ViettelNumb(str) {
+        let regex =/^(09[6|7|8]|086|03[2-9]|03966])[0-9]{7}$/;
+        if (regex.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    var phone = ['0982084012','0918829467','0928476193','0984927501','0948621221'];
+    for (let i = 0, l = phone.length; i < l; i++){
+        if (is_ViettelNumb(phone[i])){
+            alert(phone[i] + " is a Viettel number");
+        } else {
+            alert(phone[i] + " is not a Viettel number");
+        }
+    }
+</script>
+</body>
+</html>
